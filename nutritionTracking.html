@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  h1 {
+    padding: 6px;
+    font-size: 250%;
+    border-radius: 15px;
+    background-color: black;
+    color: brown;
+  }
+
+  .container3 {
+    display: flex;
+    width: 100%;
+    float: right;
+    margin-top: 0;
+    margin-right: 0cm;
+    background-color: rgb(250, 246, 246);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida 
+ Sans Unicode', ' Geneva', ' Verdana', ' sans-serif'
+
+  }
+
+  .container3 img {
+    height: 40px;
+  }
+
+  .one {
+    color: black;
+    width: 33.3%;
+  }
+
+  .one li {
+    list-style: none;
+  }
+
+  .one img {
+    height: 30px;
+  }
+
+  .two {
+    width: 33.3%;
+    text-align: center;
+    color: brown;
+  }
+
+  .three {
+    margin-left: 2cm;
+    margin-top: .5cm;
+  }
+
+  .three img {
+    margin: 4px 4px;
+  }
+
+  h3 {
+    padding: 6px;
+    font-size: 200%;
+    border-radius: 15px;
+    color: brown;
+    background-color: black;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  form input[type="text"],
+  form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  form input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: brown;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+  #food-list {
+    margin-top: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+
+  .delete-button {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+  }
+</style>
+
+<body>
+  <div class="name">
+    <h1 ALIGN="center"><img height="43px" src="img/logoo.jpeg">&nbspNutrition Tracking</h1>
+  </div>
+  <div>
+    <div class="container">
+      <form id="nutrition" onsubmit="submitForm(event)">
+        <label for="food-name">Food Name:</label>
+        <input type="text" id="food-name" name="food-name" required>
+
+        <label for="calories">Calories:</label>
+        <input type="number" id="calories" name="calories" required>
+
+        <label for="protein">Protein:</label>
+        <input type="number" id="protein" name="protein" required>
+
+        <label for="Carbohydrates">Carbohydrates:</label>
+        <input type="number" id="Carbohydrates" name="Carbohydrates" required>
+
+        <label for="fat">Fat:</label>
+        <input type="number" id="fat" name="fat" required>
+
+        <input type="submit" value="Add Food">
+      </form>
+
+      <div>
+        <table id="food-list">
+          <thead>
+            <tr>
+              <th>Food Name</th>
+              <th>Calories</th>
+              <th>Protein</th>
+              <th>Carbohydrates</th>
+              <th>Fat</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h3 ALIGN="center"><a href="index.html" class="dropbtn" style="color:brown; ">GO TO HOME</a></h3>
+    </div>
+
+  </div>
+
+  <div class="container3">
+    <div class="one">
+      <ul>
+        <li><img src="img/location.jpeg" alt="" height="45px"> UIET,PU,SEC-25,CHD</li><br>
+        <li><img src="img/phone.jpeg" alt="" height="45px">1234567890</li><br>
+        <li><img src="img/email.jpeg" alt="" height="44px">
+          123@gmail.com</li>
+      </ul>
+    </div>
+
+    <div class="two">
+      <h2 ALIGN="center">
+        <img height="45px" src="img/logoo.jpeg" alt="Logo Not Found">Fitrack</img>
+      </h2>
+    </div>
+    <div class="three">
+      <img src="img/twitter.jpeg" alt="Error" height="45px">
+      <img src="img/instagram.jpeg" alt="Error" height="45px">
+      <img src="img/youtube logo.jpeg" alt="Error" height="45px">
+    </div>
+  </div>
+
+  <script src="nutscr.js"></script>
+</body>
+
+</html>

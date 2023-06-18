@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BMI Calculator</title>
+</head>
+
+<style>
+    .container {
+        background-color: antiquewhite;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        background-color: brown;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #results {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .container3 {
+        display: flex;
+        width: 100%;
+        float: right;
+        margin-top: 0;
+        margin-right: 0cm;
+        background-color: rgb(250, 246, 246);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida'
+            Sans Unicode', ' Geneva', ' Verdana', ' sans-serif'
+
+    }
+
+    .container3 img {
+        height: 40px;
+        border-radius: 9px;
+    }
+
+    .one {
+        color: black;
+        width: 33.3%;
+    }
+
+    .one li {
+        list-style: none;
+    }
+
+    .one img {
+        height: 30px;
+    }
+
+    .two {
+        width: 33.3%;
+        text-align: center;
+        color: brown;
+    }
+
+    .three {
+        margin-left: 2cm;
+        margin-top: .5cm;
+    }
+
+    .three img {
+        margin: 4px 4px;
+    }
+</style>
+
+<body>
+    <header id="myheader">
+        <h1 ALIGN="center"><img height="43px" src="./img/logoo.jpeg">&nbsp;Fitrack</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h1>BMI Calculator</h1>
+            <div>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter weight">
+            </div>
+            <div>
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter height">
+            </div>
+            <button onclick="calculateBMI()">Calculate</button>
+            <div id="results"></div>
+        </div>
+    </main>
+    <br><br><br>
+    <div>
+        <h3 ALIGN="center"><a href="index.html" class="dropbtn" style="color:brown; ">GO TO HOME</a></h3>
+    </div>
+    <br><br><br>
+    <footer>
+        <div class="container3">
+            <div class="one">
+                <ul>
+                    <li><img src="img/location.jpeg" alt="" height="45px"> UIET,PU,SEC-25,CHD</li><br>
+                    <li><img src="img/phone.jpeg" alt="" height="45px">1234567890</li><br>
+                    <li><img src="img/email.jpeg" alt="" height="44px">
+                        123@gmail.com</li>
+                </ul>
+            </div>
+            <div class="two">
+                <h1 ALIGN="center">
+                    <img height="45px" src="img/logoo.jpeg" alt="Logo Not Found">Fitrack</img>
+                </h1>
+            </div>
+            <div class="three">
+                <a href="https://twitter.com"><img src="img/twitter.jpeg" alt="Error" height="45px"></a>
+                <a href="https://instagram.com"><img src="img/instagram.jpeg" alt="Error" height="45px"></a>
+                <a href="https://youtube.com"><img src="img/youtube logo.jpeg" alt="Error" height="45px"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    let header = document.getElementById("myheader");
+    header.style.backgroundColor = "black";
+    header.style.textAlign = "center";
+    header.style.color = "brown";
+
+    function calculateBMI() {
+        var weightInput = document.getElementById("weight");
+        var heightInput = document.getElementById("height");
+        var resultsDiv = document.getElementById("results");
+
+        var weight = parseFloat(weightInput.value);
+        var height = parseFloat(heightInput.value) / 100;
+
+        if (isNaN(weight) || isNaN(height)) {
+            resultsDiv.innerHTML = "Please enter valid weight and height.";
+            return;
+        }
+
+        var bmi = weight / (height * height);
+        var category = getBMICategory(bmi);
+
+        var resultsText = "Weight: " + weight + " kg<br>";
+        resultsText += "Height: " + height * 100 + " cm<br>";
+        resultsText += "BMI: " + bmi.toFixed(2) + "<br>";
+        resultsText += "Category: " + category;
+
+        resultsDiv.innerHTML = resultsText;
+    }
+
+    function getBMICategory(bmi) {
+        if (bmi < 18.5) {
+            return "Underweight";
+        } else if (bmi >= 18.5 && bmi < 25) {
+            return "Normal weight";
+        } else if (bmi >= 25 && bmi < 30) {
+            return "Overweight";
+        } else {
+            return "Obese";
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenges</title>
+</head>
+<style>
+    h1 {
+        padding: 6px;
+        font-size: 200%;
+        border-radius: 15px;
+        background-color: black;
+        color: brown;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 30px;
+        font-size: 150%;
+    }
+
+    h3 {
+        padding: 6px;
+        font-size: 200%;
+        border-radius: 15px;
+        color: brown;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="number"] {
+        padding: 5px;
+        width: 200px;
+        height: 25px;
+    }
+
+    form input[type="submit"] {
+        padding: 8px 14px;
+        background-color: brown;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 20px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+
+    }
+
+    th {
+        background-color: black;
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: brown;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+    .delete-button {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+  }
+</style>
+
+<body>
+    <div class="name">
+        <h1 ALIGN="center"><img height="43px" src="img/logoo.jpeg">&nbspChallenges</h1>
+    </div>
+    <div>
+
+        <h2>Add Challenge</h2>
+        <form id="challenges" method="post" onsubmit="submitForm(event)">
+            <label for="exercise">Exercise:</label>
+            <input type="text" name="exercise" id="exercise" placeholder="push-ups.." required>
+            <br><br>
+            <label for="duration">Duration (in minutes):</label>
+            <input type="number" name="duration" id="duration" placeholder="2" required>
+            <br><br>
+            <input type="submit" value="Add Workout">
+        </form>
+        <div>
+            <h3 align="center">Challenge List</h3>
+            <table id="challengelist">
+                <thead>
+                    <tr>
+                        <th>Exercise</th>
+                        <th>Duration</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <br>
+        <br><br><br><br>
+        <div>
+            <h3 ALIGN="center"><a href="index.html" class="dropbtn" style="color:brown; ">GO TO HOME</a></h3>
+        </div>
+    <!-- </div> -->
+    <h1 ALIGN="center">
+        <img height="45px" src="img/logoo.jpeg" alt="Logo Not Found">Fitrack</img>
+    </h1>
+    <script src="nutsrc.js"></script>
+</body>
+
+</html>
