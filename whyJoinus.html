@@ -80,6 +80,16 @@
         cursor: pointer;
         border-radius: 5px;
     }
+    .join1{
+        background-color: black;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+
 
     .container3 {
         display: flex;
@@ -187,9 +197,13 @@
     <br><br><br>
     <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br>
     <div>
+        <h3 ALIGN="center"><a href="signup.html" style="color:brown;" class="join1">JOIN</a></h3>
+    </div>
+    <br>
+    <div>
         <h3 ALIGN="center"><a href="index.html" style="color:brown;" class="hom1">GO TO HOME</a></h3>
     </div>
-    <br><br><br>
+    <br><br>
     <footer>
         <div class="container3">
             <div class="one">
@@ -225,17 +239,20 @@
 
     $(document).ready(function () {
 
-      
+        // let joini = document.getElementsByClassName("join1");
+        // joini.style.backgroundColor="black";
+
         $(".btnn1").click(function () {
             // $("#para1").toggle(400);
             $("#para1").slideUp(400).slideDown(800);
             //  $(".img_lagoo").slideToggle(400);
         })
         $(".btnn2").click(function () {
-            $("#para2").toggle(400);
+            $("#para2").toggle(400).toggle(600);
         })
         $(".btnn3").click(function () {
-            $("#para3").toggle(400);
+            // $("#para3").toggle(400);
+            $("#para3").fadeOut(1000).fadeIn(1600);
         })
 
     });
